@@ -2,13 +2,14 @@
 
  Refactor the code below (note that we showed her this and discussed it in her interview) to improve the security and implement best-practices in terms of Magento coding approaches. Also, please create a module that contains the rewritten controller and (at least) system.xml to specify appropriate default values.
 
- public function postAction() {            
-     //avoid notices warnings
-     !isset($_POST['livechat_license_number']) ? $livechat_license_number = '' : $livechat_license_number = $_POST['livechat_license_number'];
-     !isset($_POST['livechat_groups']) ? $livechat_groups = '0' : $livechat_groups = $_POST['livechat_groups']; 
-     !isset($_POST['livechat_params']) ? $livechat_params = '' : $livechat_params = $_POST['livechat_params'];
+ 
 
-     $config_table = Mage::getSingleton('core/resource')->getTableName('core_config_data');
+    public function postAction() {            
+    //avoid notices warnings
+    !isset($_POST['livechat_license_number']) ? $livechat_license_number = '' : $livechat_license_number =   $_POST['livechat_license_number'];
+    !isset($_POST['livechat_groups']) ? $livechat_groups = '0' : $livechat_groups = $_POST['livechat_groups']; 
+    !isset($_POST['livechat_params']) ? $livechat_params = '' : $livechat_params = $_POST['livechat_params'];
+    $config_table = Mage::getSingleton('core/resource')->getTableName('core_config_data');
 
     $read = Mage::getSingleton('core/resource')->getConnection('core_read');
     $query = 'SELECT * FROM ' . $config_table;
@@ -48,5 +49,5 @@
     Mage::getConfig()->cleanCache();
     Mage::getConfig()->reinit();
 
-    $this->_redirect('*/*/index');
-}
+    $this->_redirect('*/*/index'); 
+    }
