@@ -1,0 +1,10 @@
+app/etc/local.xml
+LICENSE_AFL.txt
+LICENSE.html
+LICENSE.txt
+media/*
+!media/.htaccess
+RELEASE_NOTES.txt
+var/*
+!var/.htaccess
+/downloader
