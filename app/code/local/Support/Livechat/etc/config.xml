@@ -20,6 +20,16 @@
                 <class>Support_Livechat_Helper</class>
             </support_livechat>
         </helpers>
+        <blocks>
+            <livechat>
+                <class>Support_Livechat_Block</class>
+            </livechat>
+            <adminhtml>
+                <rewrite>
+                    <sales_order_status_grid>Support_Livechat_Block_Adminhtml_Sales_Order_Grid</sales_order_status_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks> 
     </global>
     <frontend>
         <routers>
@@ -32,6 +42,15 @@
             </livechat>
         </routers>
     </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <support_livechat before="Mage_Adminhtml">Support_Livechat_Adminhtml</support_livechat>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 </config>
-
-
