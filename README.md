@@ -1,6 +1,6 @@
 # specimen
 
- Refactor the code below (note that we showed her this and discussed it in her interview) to improve the security and implement best-practices in terms of Magento coding approaches. Also, please create a module that contains the rewritten controller and (at least) system.xml to specify appropriate default values.
+ Refactor the code below to improve the security and implement best-practices in terms of Magento coding approaches. Also, please create a module that contains the rewritten controller and (at least) system.xml to specify appropriate default values.
 
  
 
