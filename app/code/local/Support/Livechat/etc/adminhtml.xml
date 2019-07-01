@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Livechat Module
+ *
+ * @category   livechat
+ * @package    support_livechat
+ * @author     Revathi Ganesh revathi.itbtech@gmail.com
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <livechat>
+                                        <title>Livechat</title>
+                                    </livechat>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
